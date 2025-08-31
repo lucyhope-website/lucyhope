@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lucy Hope</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quattrocento+Sans:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Quattrocento Sans', sans-serif;
+      font-weight: 300;
+      margin: 0;
+      padding: 0;
+      background-color: #dbe3e6;
+      color: #333;
+    }
+    header {
+      text-align: center;
+      padding: 2rem;
+      background-color: #dbe3e6;
+    }
+    header h1 {
+      font-weight: 400;
+      font-size: 2.5rem;
+      margin: 0;
+    }
+    nav {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 300;
+      transition: color 0.5s ease, transform 0.3s ease;
+      display: inline-block;
+    }
+    nav a:hover {
+      color: #666;
+      transform: scale(1.05);
+    }
+    section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+    h2 {
+      font-weight: 400;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    p {
+      max-width: 700px;
+      margin: auto;
+      line-height: 1.6;
+      font-weight: 300;
+    }
+    .gallery {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin: 2rem;
+      flex-wrap: wrap;
+    }
+    .gallery-item {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+    .gallery-item span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #dbe3e6;
+      font-size: 1.8rem;
+      font-weight: 300;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      pointer-events: none;
+    }
+    .gallery-item:hover span {
+      opacity: 1;
+    }
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+    form {
+      max-width: 400px;
+      margin: 3rem auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    input, textarea, button {
+      padding: 10px;
+      font-size: 1rem;
+      border: 1px solid #555;
+      border-radius: 0;
+      font-family: 'Quattrocento Sans', sans-serif;
+      font-weight: 300;
+      background-color: #dbe3e6;
+      color: #333;
+    }
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: #333;
+      background-color: #c5d1d6;
+    }
+    button {
+      background: #7a8d96;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      border-radius: 0;
+    }
+    button:hover {
+      background: #5c6b72;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Lucy Hope</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">About</a> |
+    <a href="illustrations.html">Illustrations</a> |
+    <a href="linocuts.html">Linocuts</a> |
+    <a href="other.html">Other Works</a> |
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About</h2>
+    <p>Hi, I am Lucy Hope. I am an illustrator, multidisciplinary artist and a small business owner.
+    I am passionate about giving children and adults access to illustrations and artworks that are hand-created - art that is thoughtful, vibrant and full of colours and natural patterns. 
+    I live near the ocean and am ever inspired by its vastness and rhythms of nature. Many of my artworks are an ode to the land: a way to capture a memory of a place and time.</p>
+    <p>Contact me to enquire about buying prints, commissions or to order linocut invitations and cards.</p>
+  </section>
+
+  <!-- Gallery Preview Section -->
+  <section class="gallery">
+    <a href="illustrations.html" class="gallery-item">
+      <img src="images/illustration1.jpg" alt="Illustrations">
+      <span>Illustrations</span>
+    </a>
+    <a href="linocuts.html" class="gallery-item">
+      <img src="images/linocut1.jpg" alt="Linocuts">
+      <span>Linocuts</span>
+    </a>
+    <a href="other.html" class="gallery-item">
+      <img src="images/photo1.jpg" alt="Other Works">
+      <span>Other Works</span>
+    </a>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <form action="mailto:lucyhcox0@gmail.com" method="post" enctype="text/plain">
+      <input type="text" name="subject" placeholder="Subject">
+      <input type="email" name="email" placeholder="Your Email">
+      <textarea name="message" placeholder="Message"></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+</body>
+</html>
