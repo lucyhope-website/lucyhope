@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- makes responsive work on phones -->
   <title>LUCY HOPE</title>
 
   <!-- Google Fonts (Montserrat) -->
@@ -17,12 +18,13 @@
       color: #333;
       display: flex;
       flex-direction: column;
+      min-height: 100vh; /* ensures footer sits at bottom */
     }
 
     /* Layout container */
     .layout {
       display: flex;
-      min-height: 100vh;
+      flex: 1; /* pushes footer to bottom */
     }
 
     /* Sidebar */
@@ -170,6 +172,16 @@
       background: #5c6b72;
     }
 
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      font-weight: 200;
+      color: #555;
+      background-color: #dbe3e6;
+    }
+
     /* --- Responsive styles for phones/tablets --- */
     @media (max-width: 768px) {
       .layout {
@@ -269,6 +281,16 @@
       </section>
     </main>
   </div>
+
+    <!-- Footer -->
+  <footer>
+    © Lucy Hope <span id="year"></span>
+  </footer>
+
+  <script>
+    // Insert current year automatically
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 
 </body>
 </html>

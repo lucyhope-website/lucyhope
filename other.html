@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- responsive for phones -->
   <title>Other Works - Lucy Hope</title>
   <!-- Load Montserrat Extra Light -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap" rel="stylesheet">
+
   <style>
     body {
       font-family: 'Montserrat', sans-serif;
@@ -14,8 +16,13 @@
       background-color: #dbe3e6;
       color: #333;
       display: flex;
-      flex-direction: row;
-      min-height: 100vh;
+      flex-direction: column;
+      min-height: 100vh; /* keeps footer at bottom */
+    }
+
+    .layout {
+      display: flex;
+      flex: 1;
     }
 
     .sidebar {
@@ -24,10 +31,11 @@
       padding: 2rem 1rem;
       display: flex;
       flex-direction: column;
+      align-items: flex-start;
       position: sticky;
       top: 0;
       height: 100vh;
-      box-sizing: border-box;
+      flex-shrink: 0;
     }
 
     .sidebar h1 {
@@ -73,7 +81,7 @@
 
     .other-gallery a {
       display: block;
-      max-width: 400px;
+      max-width: 800px; /* keep your original size */
       width: 100%;
       overflow: hidden;
     }
@@ -83,7 +91,6 @@
       height: auto;
       cursor: pointer;
       transition: transform 0.3s ease;
-      display: block;
     }
 
     .other-gallery img:hover {
@@ -134,9 +141,19 @@
       text-decoration: none;
     }
 
-    /* Responsive styles */
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      font-weight: 200;
+      color: #555;
+      background-color: #dbe3e6;
+    }
+
+    /* --- Responsive styles for phones/tablets --- */
     @media (max-width: 768px) {
-      body {
+      .layout {
         flex-direction: column;
       }
 
@@ -157,64 +174,76 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 1.5rem;
+        gap: 1rem;
       }
 
       .content {
-        padding: 1.5rem;
-      }
-
-      .other-gallery {
-        gap: 15px;
+        padding: 1rem;
       }
 
       .other-gallery a {
         max-width: 100%;
+      }
+
+      h2 {
+        font-size: 1.5rem;
       }
     }
   </style>
 </head>
 <body>
 
-  <aside class="sidebar">
-    <h1>Lucy Hope</h1>
-    <nav>
-      <a href="index.html">About</a>
-      <a href="illustrations.html">Illustrations</a>
-      <a href="linocuts.html">Linocuts</a>
-      <a href="other.html">Other Works</a>
-      <a href="shop.html">Shop</a>
-      <a href="index.html#contact">Contact</a>
-    </nav>
-  </aside>
+  <div class="layout">
+    <aside class="sidebar">
+      <h1>Lucy Hope</h1>
+      <nav>
+        <a href="index.html">About</a>
+        <a href="illustrations.html">Illustrations</a>
+        <a href="linocuts.html">Linocuts</a>
+        <a href="other.html">Other Works</a>
+        <a href="shop.html">Shop</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </aside>
 
-  <main class="content">
-    <h2>Other Works</h2>
-    <section class="other-gallery">
-      <a href="#lb17"><img src="images/cyanotype2.jpg" alt="Cyanotype 2"></a>
-      <a href="#lb18"><img src="images/cyanotype3.jpg" alt="Cyanotype 3"></a>
-      <a href="#lb19"><img src="images/cyanotype4.jpg" alt="Cyanotype 4"></a>
-      <a href="#lb20"><img src="images/cyanotype5.jpg" alt="Cyanotype 5"></a>
-      <a href="#lb21"><img src="images/cyanotype6.jpg" alt="Cyanotype 6"></a>
-      <a href="#lb22"><img src="images/photo1.jpg" alt="Photo 1"></a>
-      <a href="#lb23"><img src="images/photo2.jpg" alt="Photo 2"></a>
-      <a href="#lb24"><img src="images/photo3.jpg" alt="Photo 3"></a>
-      <a href="#lb25"><img src="images/photo4.jpg" alt="Photo 4"></a>
-      <a href="#lb26"><img src="images/photo5.jpg" alt="Photo 5"></a>
-    </section>
+    <main class="content">
+      <h2>Other Works</h2>
+      <section class="other-gallery">
+        <a href="#lb17"><img src="images/cyanotype2.jpg" alt="Cyanotype 2"></a>
+        <a href="#lb18"><img src="images/cyanotype3.jpg" alt="Cyanotype 3"></a>
+        <a href="#lb19"><img src="images/cyanotype4.jpg" alt="Cyanotype 4"></a>
+        <a href="#lb20"><img src="images/cyanotype5.jpg" alt="Cyanotype 5"></a>
+        <a href="#lb21"><img src="images/cyanotype6.jpg" alt="Cyanotype 6"></a>
+        <a href="#lb22"><img src="images/photo1.jpg" alt="Photo 1"></a>
+        <a href="#lb23"><img src="images/photo2.jpg" alt="Photo 2"></a>
+        <a href="#lb24"><img src="images/photo3.jpg" alt="Photo 3"></a>
+        <a href="#lb25"><img src="images/photo4.jpg" alt="Photo 4"></a>
+        <a href="#lb26"><img src="images/photo5.jpg" alt="Photo 5"></a>
+      </section>
 
-    <!-- Lightbox overlays -->
-    <div id="lb17" class="lightbox"><a href="other.html" class="close">&times;</a><img src="images/cyanotype2.jpg" alt="Cyanotype 2"><p class="art-text"><em>Rockpool</em>, cyanotype and wool embroidery, 190cm high, 2024</p></div>
-    <div id="lb18" class="lightbox"><a href="other.html" class="close">&times;</a><img src="images/cyanotype3.jpg" alt="Cyanotype 3"><p class="art-text"><em>Rockpool</em>, cyanotype and wool embroidery, 190cm high, 2024</p></div>
-    <div id="lb19" class="lightbox"><a href="other.html" class="close">&times;</a><img src="images/cyanotype4.jpg" alt="Cyanotype 4"><p class="art-text"><em>Rockpool</em>, cyanotype and wool embroidery, 190cm high, 2024 [process]</p></div>
-    <div id="lb20" class="lightbox"><a href="other.html" class="close">&times;</a><img src="images/cyanotype5.jpg" alt="Cyanotype 5"><p class="art-text"><em>Rockpool</em>, cyanotype and wool embroidery, 190cm high, 2024 [details]</p></div>
-    <div id="lb21" class="lightbox"><a href="other.html" class="close">&times;</a><img src="images/cyanotype6.jpg" alt="Cyanotype 6"><p class="art-text"><em>Rockpool</em>, cyanotype and wool embroidery, 190cm high, 2024 [process]</p></div>
-    <div id="lb22" class="lightbox"><a href="other.html" class="close">&times;</a><img src="images/photo1.jpg" alt="Photo 1"><p class="art-text">Analogue photography, 2024</p></div>
-    <div id="lb23" class="lightbox"><a href="other.html" class="close">&times;</a><img src="images/photo2.jpg" alt="Photo 2"><p class="art-text">Analogue photography, 2024</p></div>
-    <div id="lb24" class="lightbox"><a href="other.html" class="close">&times;</a><img src="images/photo3.jpg" alt="Photo 3"><p class="art-text">Analogue photography, 2024</p></div>
-    <div id="lb25" class="lightbox"><a href="other.html" class="close">&times;</a><img src="images/photo4.jpg" alt="Photo 4"><p class="art-text">Analogue photography, 2024</p></div>
-    <div id="lb26" class="lightbox"><a href="other.html" class="close">&times;</a><img src="images/photo5.jpg" alt="Photo 5"><p class="art-text">Analogue photography, 2024</p></div>
-  </main>
+      <!-- Lightbox overlays -->
+      <div id="lb17" class="lightbox"><a href="other.html" class="close">&times;</a><img src="images/cyanotype2.jpg" alt="Cyanotype 2"><p class="art-text"><em>Rockpool</em>, cyanotype and wool embroidery, 190cm high, 2024</p></div>
+      <div id="lb18" class="lightbox"><a href="other.html" class="close">&times;</a><img src="images/cyanotype3.jpg" alt="Cyanotype 3"><p class="art-text"><em>Rockpool</em>, cyanotype and wool embroidery, 190cm high, 2024</p></div>
+      <div id="lb19" class="lightbox"><a href="other.html" class="close">&times;</a><img src="images/cyanotype4.jpg" alt="Cyanotype 4"><p class="art-text"><em>Rockpool</em>, cyanotype and wool embroidery, 190cm high, 2024 [process]</p></div>
+      <div id="lb20" class="lightbox"><a href="other.html" class="close">&times;</a><img src="images/cyanotype5.jpg" alt="Cyanotype 5"><p class="art-text"><em>Rockpool</em>, cyanotype and wool embroidery, 190cm high, 2024 [details]</p></div>
+      <div id="lb21" class="lightbox"><a href="other.html" class="close">&times;</a><img src="images/cyanotype6.jpg" alt="Cyanotype 6"><p class="art-text"><em>Rockpool</em>, cyanotype and wool embroidery, 190cm high, 2024 [process]</p></div>
+      <div id="lb22" class="lightbox"><a href="other.html" class="close">&times;</a><img src="images/photo1.jpg" alt="Photo 1"><p class="art-text">Analogue photography, 2024</p></div>
+      <div id="lb23" class="lightbox"><a href="other.html" class="close">&times;</a><img src="images/photo2.jpg" alt="Photo 2"><p class="art-text">Analogue photography, 2024</p></div>
+      <div id="lb24" class="lightbox"><a href="other.html" class="close">&times;</a><img src="images/photo3.jpg" alt="Photo 3"><p class="art-text">Analogue photography, 2024</p></div>
+      <div id="lb25" class="lightbox"><a href="other.html" class="close">&times;</a><img src="images/photo4.jpg" alt="Photo 4"><p class="art-text">Analogue photography, 2024</p></div>
+      <div id="lb26" class="lightbox"><a href="other.html" class="close">&times;</a><img src="images/photo5.jpg" alt="Photo 5"><p class="art-text">Analogue photography, 2024</p></div>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    © Lucy Hope <span id="year"></span>
+  </footer>
+
+  <script>
+    // Insert current year automatically
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 
 </body>
 </html>
