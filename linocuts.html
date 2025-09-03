@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <title>Linocuts - Lucy Hope</title>
-  <!-- Load Montserrat Extra Light to match homepage -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap" rel="stylesheet">
   <style>
     body {
@@ -15,6 +14,7 @@
       color: #333;
       display: flex;
       flex-direction: column;
+      min-height: 100vh;
     }
 
     /* Layout container */
@@ -23,7 +23,7 @@
       min-height: 100vh;
     }
 
-    /* Left side: title + nav */
+    /* Sidebar */
     .sidebar {
       width: 220px;
       background-color: #dbe3e6;
@@ -59,7 +59,7 @@
       color: #666;
     }
 
-    /* Right side: content */
+    /* Content */
     .content {
       flex: 1;
       padding: 2rem;
@@ -73,7 +73,8 @@
     }
 
     .linocuts-gallery img {
-      width: 800px; /* actual size */
+      max-width: 800px;
+      width: 100%;
       height: auto;
       display: block;
       cursor: pointer;
@@ -84,6 +85,7 @@
       transform: scale(1.02);
     }
 
+    /* Lightbox */
     .lightbox {
       display: none;
       position: fixed;
@@ -128,16 +130,49 @@
       margin-top: 0.5rem;
     }
 
-    section {
-      padding: 2rem 0;
-    }
-
     h2 {
       font-weight: 300;
       margin-bottom: 20px;
       text-align: center;
     }
 
+    /* Mobile styles */
+    @media (max-width: 768px) {
+      .layout {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 1rem;
+        align-items: center;
+      }
+
+      .sidebar h1 {
+        margin-bottom: 1rem;
+      }
+
+      .sidebar nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+      }
+
+      .content {
+        padding: 1.5rem 1rem;
+      }
+
+      .linocuts-gallery {
+        gap: 1.5rem;
+      }
+
+      .linocuts-gallery img {
+        max-width: 100%;
+      }
+    }
   </style>
 </head>
 <body>
@@ -151,17 +186,16 @@
         <a href="illustrations.html">Illustrations</a>
         <a href="linocuts.html">Linocuts</a>
         <a href="other.html">Other Works</a>
-		<a href="shop.html">Shop</a>
+        <a href="shop.html">Shop</a>
         <a href="index.html#contact">Contact</a>
       </nav>
     </aside>
 
     <!-- Main content -->
     <main class="content">
-      <!-- Linocuts Gallery -->
       <section class="linocuts-gallery">
         <h2>Linocuts</h2>
-        
+
         <a href="#lb11"><img src="images/linocut2.jpg" alt="The Landlord"></a>
         <a href="#lb12"><img src="images/linocut3.jpg" alt="Tree Stump"></a>
         <a href="#lb13"><img src="images/linocut4.jpg" alt="Fire"></a>
@@ -170,37 +204,36 @@
         <a href="#lb16"><img src="images/linocut7.jpg" alt="Sky"></a>
       </section>
 
-      <!-- Lightbox overlays -->
+      <!-- Lightboxes -->
       <div id="lb11" class="lightbox"><a href="linocuts.html" class="close">&times;</a>
         <img src="images/linocut2.jpg" alt="The Landlord">
-        <p class="art-text"><em>The Landlord</em>, Screen Print and Linocut print on paper, 19cm x 19cm, 2023</p>
+        <p class="art-text"><em>The Landlord</em>, Screen Print and Linocut on paper, 19cm x 19cm, 2023</p>
       </div>
 
       <div id="lb12" class="lightbox"><a href="linocuts.html" class="close">&times;</a>
         <img src="images/linocut3.jpg" alt="Tree Stump">
-        <p class="art-text"><em>Tree Stump</em>, Screen Print and Linocut print on paper, 19cm x 19cm, 2023</p>
+        <p class="art-text"><em>Tree Stump</em>, Screen Print and Linocut on paper, 19cm x 19cm, 2023</p>
       </div>
 
       <div id="lb13" class="lightbox"><a href="linocuts.html" class="close">&times;</a>
         <img src="images/linocut4.jpg" alt="Fire">
-        <p class="art-text"><em>Fire</em>, Screen Print and Linocut print on paper, 19cm x 19cm, 2023</p>
+        <p class="art-text"><em>Fire</em>, Screen Print and Linocut on paper, 19cm x 19cm, 2023</p>
       </div>
 
       <div id="lb14" class="lightbox"><a href="linocuts.html" class="close">&times;</a>
         <img src="images/linocut5.jpg" alt="Waves">
-        <p class="art-text"><em>Waves</em>, Screen Print and Linocut print on paper, 19cm x 19cm, 2023</p>
+        <p class="art-text"><em>Waves</em>, Screen Print and Linocut on paper, 19cm x 19cm, 2023</p>
       </div>
 
       <div id="lb15" class="lightbox"><a href="linocuts.html" class="close">&times;</a>
         <img src="images/linocut6.jpg" alt="Earth Worm">
-        <p class="art-text"><em>Earth Worm</em>, Screen Print and Linocut print on paper, 19cm x 19cm, 2023</p>
+        <p class="art-text"><em>Earth Worm</em>, Screen Print and Linocut on paper, 19cm x 19cm, 2023</p>
       </div>
 
       <div id="lb16" class="lightbox"><a href="linocuts.html" class="close">&times;</a>
         <img src="images/linocut7.jpg" alt="Sky">
-        <p class="art-text"><em>Sky</em>, Screen Print and Linocut print on paper, 19cm x 19cm, 2023</p>
+        <p class="art-text"><em>Sky</em>, Screen Print and Linocut on paper, 19cm x 19cm, 2023</p>
       </div>
-
     </main>
   </div>
 

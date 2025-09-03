@@ -14,6 +14,13 @@
       background-color: #dbe3e6;
       color: #333;
       display: flex;
+      flex-direction: column;
+    }
+
+    /* Layout */
+    .layout {
+      display: flex;
+      min-height: 100vh;
     }
 
     /* Sidebar menu */
@@ -55,7 +62,6 @@
     .content {
       flex: 1;
       padding: 2rem;
-      overflow-x: auto; /* horizontal scroll if needed */
     }
 
     section {
@@ -65,13 +71,15 @@
     h2 {
       font-weight: 300;
       margin-bottom: 1rem;
+      text-align: center;
     }
 
     p {
       max-width: 700px;
       line-height: 1.6;
       font-weight: 200;
-      margin-bottom: 2rem;
+      margin: 0 auto 2rem;
+      text-align: center;
     }
 
     /* Illustrations grid */
@@ -146,55 +154,91 @@
       font-size: 2rem;
       text-decoration: none;
     }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .layout {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 1rem;
+        align-items: center;
+      }
+
+      .sidebar h1 {
+        margin-bottom: 1rem;
+      }
+
+      .sidebar nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+      }
+
+      .content {
+        padding: 1rem;
+      }
+
+      p {
+        padding: 0 1rem;
+      }
+    }
   </style>
 </head>
 <body>
 
-  <!-- Sidebar -->
-  <aside class="sidebar">
-    <h1>Lucy Hope</h1>
-    <nav>
-      <a href="index.html">About</a>
-      <a href="illustrations.html">Illustrations</a>
-      <a href="linocuts.html">Linocuts</a>
-      <a href="other.html">Other Works</a>
-	  <a href="shop.html">Shop</a>
-      <a href="https://formspree.io/f/mzzagnpo" target="_blank">Contact</a>
-    </nav>
-  </aside>
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h1>Lucy Hope</h1>
+      <nav>
+        <a href="index.html">About</a>
+        <a href="illustrations.html">Illustrations</a>
+        <a href="linocuts.html">Linocuts</a>
+        <a href="other.html">Other Works</a>
+        <a href="shop.html">Shop</a>
+        <a href="https://formspree.io/f/mzzagnpo" target="_blank">Contact</a>
+      </nav>
+    </aside>
 
-  <!-- Main content -->
-  <main class="content">
-    <section id="illustrations">
-      <h2>Illustrations</h2>
-      <p>My warm and nostalgic illustration style immerses audiences into young characters’ wild imaginations; inviting them on a journey across landscapes surrounded by native Australian flora and fauna.</p>
+    <!-- Main content -->
+    <main class="content">
+      <section id="illustrations">
+        <h2>Illustrations</h2>
+        <p>My warm and nostalgic illustration style immerses audiences into young characters’ wild imaginations; inviting them on a journey across landscapes surrounded by native Australian flora and fauna.</p>
 
-      <div class="illustrations-grid">
-        <div><a href="#lb1"><img src="images/illustration1.jpg" alt="Illustration 1"></a></div>
-        <div><a href="#lb2"><img src="images/illustration2.jpg" alt="Illustration 2"></a></div>
-        <div><a href="#lb3"><img src="images/illustration3.jpg" alt="Illustration 3"></a></div>
-        <div><a href="#lb4"><img src="images/illustration4.jpg" alt="Illustration 4"></a></div>
-        <div><a href="#lb5"><img src="images/illustration5.jpg" alt="Illustration 5"></a></div>
-        <div><a href="#lb6"><img src="images/illustration6.jpg" alt="Illustration 6"></a></div>
-        <div><a href="#lb7"><img src="images/illustration7.jpg" alt="Illustration 7"></a></div>
-        <div><a href="#lb8"><img src="images/illustration8.jpg" alt="Illustration 8"></a></div>
-        <div><a href="#lb9"><img src="images/illustration9.jpg" alt="Illustration 9"></a></div>
-        <div><a href="#lb10"><img src="images/illustration10.jpg" alt="Illustration 10"></a></div>
-      </div>
-    </section>
+        <div class="illustrations-grid">
+          <div><a href="#lb1"><img src="images/illustration1.jpg" alt="Illustration 1"></a></div>
+          <div><a href="#lb2"><img src="images/illustration2.jpg" alt="Illustration 2"></a></div>
+          <div><a href="#lb3"><img src="images/illustration3.jpg" alt="Illustration 3"></a></div>
+          <div><a href="#lb4"><img src="images/illustration4.jpg" alt="Illustration 4"></a></div>
+          <div><a href="#lb5"><img src="images/illustration5.jpg" alt="Illustration 5"></a></div>
+          <div><a href="#lb6"><img src="images/illustration6.jpg" alt="Illustration 6"></a></div>
+          <div><a href="#lb7"><img src="images/illustration7.jpg" alt="Illustration 7"></a></div>
+          <div><a href="#lb8"><img src="images/illustration8.jpg" alt="Illustration 8"></a></div>
+          <div><a href="#lb9"><img src="images/illustration9.jpg" alt="Illustration 9"></a></div>
+          <div><a href="#lb10"><img src="images/illustration10.jpg" alt="Illustration 10"></a></div>
+        </div>
+      </section>
 
-    <!-- Lightbox overlays -->
-    <div id="lb1" class="lightbox"><a href="illustrations.html" class="close">&times;</a><img src="images/illustration1.jpg"><p class="art-text">56 cm x 76 cm, watercolour and ink on cotton paper, 2025</p></div>
-    <div id="lb2" class="lightbox"><a href="illustrations.html" class="close">&times;</a><img src="images/illustration2.jpg"><p class="art-text">56 cm x 76 cm, watercolour and ink on cotton paper, 2025</p></div>
-    <div id="lb3" class="lightbox"><a href="illustrations.html" class="close">&times;</a><img src="images/illustration3.jpg"><p class="art-text">56 cm x 76 cm, watercolour and ink on cotton paper, 2025</p></div>
-    <div id="lb4" class="lightbox"><a href="illustrations.html" class="close">&times;</a><img src="images/illustration4.jpg"><p class="art-text">56 cm x 76 cm, watercolour and ink on cotton paper, 2025</p></div>
-    <div id="lb5" class="lightbox"><a href="illustrations.html" class="close">&times;</a><img src="images/illustration5.jpg"><p class="art-text">56 cm x 76 cm, watercolour and ink on cotton paper, 2025</p></div>
-    <div id="lb6" class="lightbox"><a href="illustrations.html" class="close">&times;</a><img src="images/illustration6.jpg"><p class="art-text">56 cm x 76 cm, watercolour and ink on cotton paper, 2025</p></div>
-    <div id="lb7" class="lightbox"><a href="illustrations.html" class="close">&times;</a><img src="images/illustration7.jpg"><p class="art-text">56 cm x 76 cm, watercolour and ink on cotton paper, 2025</p></div>
-    <div id="lb8" class="lightbox"><a href="illustrations.html" class="close">&times;</a><img src="images/illustration8.jpg"><p class="art-text">56 cm x 76 cm, watercolour and ink on cotton paper, 2025</p></div>
-    <div id="lb9" class="lightbox"><a href="illustrations.html" class="close">&times;</a><img src="images/illustration9.jpg"><p class="art-text">56 cm x 76 cm, watercolour and ink on cotton paper, 2025</p></div>
-    <div id="lb10" class="lightbox"><a href="illustrations.html" class="close">&times;</a><img src="images/illustration10.jpg"><p class="art-text">56 cm x 76 cm, watercolour and ink on cotton paper, 2025</p></div>
-  </main>
+      <!-- Lightbox overlays -->
+      <div id="lb1" class="lightbox"><a href="illustrations.html" class="close">&times;</a><img src="images/illustration1.jpg"><p class="art-text">56 cm x 76 cm, watercolour and ink on cotton paper, 2025</p></div>
+      <div id="lb2" class="lightbox"><a href="illustrations.html" class="close">&times;</a><img src="images/illustration2.jpg"><p class="art-text">56 cm x 76 cm, watercolour and ink on cotton paper, 2025</p></div>
+      <div id="lb3" class="lightbox"><a href="illustrations.html" class="close">&times;</a><img src="images/illustration3.jpg"><p class="art-text">56 cm x 76 cm, watercolour and ink on cotton paper, 2025</p></div>
+      <div id="lb4" class="lightbox"><a href="illustrations.html" class="close">&times;</a><img src="images/illustration4.jpg"><p class="art-text">56 cm x 76 cm, watercolour and ink on cotton paper, 2025</p></div>
+      <div id="lb5" class="lightbox"><a href="illustrations.html" class="close">&times;</a><img src="images/illustration5.jpg"><p class="art-text">56 cm x 76 cm, watercolour and ink on cotton paper, 2025</p></div>
+      <div id="lb6" class="lightbox"><a href="illustrations.html" class="close">&times;</a><img src="images/illustration6.jpg"><p class="art-text">56 cm x 76 cm, watercolour and ink on cotton paper, 2025</p></div>
+      <div id="lb7" class="lightbox"><a href="illustrations.html" class="close">&times;</a><img src="images/illustration7.jpg"><p class="art-text">56 cm x 76 cm, watercolour and ink on cotton paper, 2025</p></div>
+      <div id="lb8" class="lightbox"><a href="illustrations.html" class="close">&times;</a><img src="images/illustration8.jpg"><p class="art-text">56 cm x 76 cm, watercolour and ink on cotton paper, 2025</p></div>
+      <div id="lb9" class="lightbox"><a href="illustrations.html" class="close">&times;</a><img src="images/illustration9.jpg"><p class="art-text">56 cm x 76 cm, watercolour and ink on cotton paper, 2025</p></div>
+      <div id="lb10" class="lightbox"><a href="illustrations.html" class="close">&times;</a><img src="images/illustration10.jpg"><p class="art-text">56 cm x 76 cm, watercolour and ink on cotton paper, 2025</p></div>
+    </main>
+  </div>
 
 </body>
 </html>

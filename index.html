@@ -36,6 +36,7 @@
       position: sticky;
       top: 0;
       height: 100vh;
+      flex-shrink: 0;
     }
 
     .sidebar h1 {
@@ -80,7 +81,7 @@
       position: relative;
       width: 100%;
       max-width: 800px;
-      aspect-ratio: 1 / 1;  /* ensures perfect square */
+      aspect-ratio: 1 / 1;
       overflow: hidden;
       cursor: pointer;
     }
@@ -98,9 +99,9 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      color: #999;
-      font-size: 1.2rem;
-      font-weight: 500;
+      color: #000; /* black text */
+      font-size: 1.4rem;
+      font-weight: 400;
       opacity: 0;
       transition: opacity 0.3s ease;
       pointer-events: none;
@@ -168,6 +169,49 @@
     button:hover {
       background: #5c6b72;
     }
+
+    /* --- Responsive styles for phones/tablets --- */
+    @media (max-width: 768px) {
+      .layout {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 1rem;
+        align-items: center;
+        text-align: center;
+      }
+
+      .sidebar h1 {
+        margin-bottom: 1rem;
+      }
+
+      .sidebar nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+      }
+
+      .content {
+        padding: 1rem;
+      }
+
+      .gallery-item {
+        max-width: 100%;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        padding: 0 1rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -181,7 +225,7 @@
         <a href="illustrations.html">Illustrations</a>
         <a href="linocuts.html">Linocuts</a>
         <a href="other.html">Other Works</a>
-		<a href="shop.html">Shop</a>
+        <a href="shop.html">Shop</a>
         <a href="#contact">Contact</a>
       </nav>
     </aside>
