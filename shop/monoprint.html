@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Monoprint – Lucy Hope</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap" rel="stylesheet">
+
+<style>
+  body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    margin: 0;
+    background-color: #dbe3e6;
+    color: #333;
+  }
+
+  /* header */
+  header {
+    text-align: center;
+    padding: 2rem 1rem 1rem;
+  }
+
+  header a {
+    text-decoration: none;
+    color: #333;
+    font-size: 0.9rem;
+  }
+
+  h1 {
+    font-weight: 300;
+    margin-top: 0.5rem;
+  }
+
+  /* layout */
+  .product {
+    max-width: 1100px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .product img {
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
+  .details h2 {
+    font-weight: 300;
+    margin-top: 0;
+  }
+
+  .price {
+    font-size: 1.1rem;
+    margin: 1rem 0;
+  }
+
+  .details p {
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+
+  .button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.8rem 1.2rem;
+    background-color: #5c6b72;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background 0.3s;
+  }
+
+  .button:hover {
+    background-color: #434d51;
+  }
+
+  /* mobile */
+  @media (max-width: 768px) {
+    .product {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+</head>
+
+<body>
+
+<header>
+  <a href="../index.html#shop">← Back to shop</a>
+  <h1>Monoprint</h1>
+</header>
+
+<div class="product">
+
+  <!-- LEFT IMAGE -->
+  <img src="../images/monoprint.jpg" alt="Monoprint – abstracted native flora">
+
+  <!-- RIGHT INFO -->
+  <div class="details">
+
+    <h2>Monoprint – Unique Original</h2>
+
+    <div class="price">$70 — 28 × 38 cm</div>
+
+    <p>
+      This monoprint is a one-of-a-kind, handprinted artwork. Each print is unique, so no two are ever exactly alike. The design features abstracted native flora, created with attention to texture, colour, and natural patterning. The image shown is an example only; your print may differ slightly, making it truly original.
+    </p>
+
+    <p>
+      Printed on 100% cotton paper.<br>
+      Typical turnaround: 5–7 days for completion, plus additional time for shipping.
+    </p>
+	  
+<a href="../index.html?item=Monoprint#contact" class="button">Enquire or purchase</a>
+
+  </div>
+
+</div>
+
+</body>
+</html>
